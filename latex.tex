@@ -1,14 +1,19 @@
 \documentclass[11pt]{article}
 %%%%% START: REQUIRED PACKAGES %%%%% 
-% ==== ОБЯЗАТЕЛЬНЫЕ ПАКЕТЫ ДЛЯ РУССКОГО ЯЗЫКА ====
+% Исправленные настройки для русского языка
+\usepackage[T1, T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
+\usepackage[english, russian]{babel}
+\usepackage{lmodern} % Вместо cm-super
 %%%%% END: REQUIRED PACKAGES %%%%% 
-% ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Дополнительные шрифты
-\usepackage{cm-super}
-% ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Пакет для гиперссылок (исправляет ошибки с \href)
-\usepackage{hyperref}
+
+% Исправленные настройки hyperref
+\usepackage[unicode, pdftex, hidelinks]{hyperref}
+\hypersetup{
+    pdftitle={Резюме Артема Коробова},
+    pdfauthor={Артем Коробов}
+}
+
 % ОБЯЗАТЕЛЬНО - Настройки страницы
 \usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry}
 % ОБЯЗАТЕЛЬНО - Настройка шрифтов без засечек
@@ -27,6 +32,7 @@
     \vspace{6pt}%
 }
 %%%%% END: SECTION MACRO %%%%%
+
 \begin{document}
 % ---------- ЗАГОЛОВОК ----------
 \begin{center}
@@ -34,7 +40,6 @@
     \large Python-разработчик \\[5pt]
 \end{center}
 % Контактная информация
-%% ПРОВЕРЬ ПОЛНОТУ КОНТАКТОВ ПО CHECKLIST ЦЕЛОСТНОСТИ. НЕ ДОБАВЛЯЙ В LATEX КОД ОТСУТСТВУЮЩИЕ В ИСХОДНОМ РЕЗЮМЕ КОНТАКТЫ.И ЕСЛИ В ИСХОДНОМ РЕЗЮМЕ ЕСТЬ КАКОЙ-ТО ДОПОЛНИТЕЛЬНЫЙ ТИП КОНТАКТА, ТО ПО ОБРАЗЦУ НИЖЕ ТАКЖЕ ДОБАВЬ ЕГО.
 \begin{center}
     \begin{tabular}{c}
         \href{mailto:artyom.korobov@list.ru}{artyom.korobov@list.ru} \\
@@ -43,12 +48,10 @@
     \end{tabular}
 \end{center}
 % ---------- ОБРАЗОВАНИЕ ----------
-%% ПРОВЕРЬ ПОЛНОТУ ДАННЫХ ОБ ОБРАЗОВАНИИ, ЯЗЫКАХ И УНИКАЛЬНЫХ ДЕТАЛЯХ ПО CHECKLIST ЦЕЛОСТНОСТИ
 \sectionheader{ОБРАЗОВАНИЕ}
 \textbf{Государственный университет управления, Москва} \hfill \textit{2026} \\
 ИИС, Бизнес-информатика \\
 % ---------- ТЕХНИЧЕСКИЕ НАВЫКИ ----------
-%% ЗАДАЧА: СГРУППИРОВАТЬ И ОБОГАТИТЬ НАВЫКИ
 \sectionheader{НАВЫКИ}
 \begin{tabular}{@{}p{0.2\textwidth} p{0.75\textwidth}@{}}
     Языки: & Python, Go, Shell, SQL \\
@@ -61,7 +64,6 @@
     Другое: & Git, REST API, SFTP, Cryptography, ORM, Agile, Selenium, BS4, Асинхронное программирование \\
 \end{tabular}
 % ---------- ОПЫТ РАБОТЫ ----------
-%% ЗАДАЧА: ПРЕОБРАЗОВАТЬ ОБЯЗАННОСТИ В ДОСТИЖЕНИЯ
 \sectionheader{ОПЫТ РАБОТЫ}
 \textbf{Банк ВТБ (ПАО), Python-разработчик} \hfill \textit{Июнь 2024 — Настоящее время} \\
 \textit{Проект: Распределённая система агентов передачи данных}
@@ -86,7 +88,4 @@
     \item Внедрил Airflow и Docker для оркестрации и планирования задач, оптимизировав процессы развертывания.
     \item \textbf{Результат:} Повышена стабильность парсинга и анализа, существенно ускорена обработка входящих запросов, улучшена масштабируемость и гибкость архитектуры.
 \end{itemize}
-% ---------- ПРОЕКТЫ ----------
-%% ЗАДАЧА: ВЫНЕСТИ ПРОЕКТЫ В ОТДЕЛЬНУЮ СЕКЦИЮ. ЕСЛИ ИХ НЕТ - ПРОПУСТИТЬ.
-% В данном резюме нет явно выделенных отдельных проектов, не связанных с опытом работы.
 \end{document}
