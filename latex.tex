@@ -1,1 +1,92 @@
-\documentclass[11pt]{article} %%%%% START: REQUIRED PACKAGES %%%%% % ==== ОБЯЗАТЕЛЬНЫЕ ПАКЕТЫ ДЛЯ РУССКОГО ЯЗЫКА ==== \usepackage[utf8]{inputenc} \usepackage[T2A]{fontenc} \usepackage[russian]{babel} %%%%% END: REQUIRED PACKAGES %%%%% % ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Дополнительные шрифты \usepackage{cm-super} % ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Пакет для гиперссылок (исправляет ошибки с \href) \usepackage{hyperref} % ОБЯЗАТЕЛЬНО - Настройки страницы \usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry} % ОБЯЗАТЕЛЬНО - Настройка шрифтов без засечек \renewcommand{\familydefault}{\sfdefault} % ОБЯЗАТЕЛЬНО - Убираем лишнее \setlength{\parindent}{0pt} \setlength{\parskip}{5pt} \pagestyle{empty} % ОБЯЗАТЕЛЬНО - Простое оформление разделов %%%%% START: SECTION MACRO %%%%% \newcommand{\sectionheader}[1]{% \vspace{8pt}% \noindent\textbf{\large #1} \\ \vspace{-8pt}% \rule{\textwidth}{0.5pt}% \vspace{6pt}% } %%%%% END: SECTION MACRO %%%%% \begin{document} % ---------- ЗАГОЛОВОК ---------- \begin{center} \LARGE \textbf{Артем Коробов} \\ \large Python-разработчик \\[5pt] \end{center} % Контактная информация %% ПРОВЕРЬ ПОЛНОТУ КОНТАКТОВ ПО CHECKLIST ЦЕЛОСТНОСТИ. НЕ ДОБАВЛЯЙ В LATEX КОД ОТСУТСТВУЮЩИЕ В ИСХОДНОМ РЕЗЮМЕ КОНТАКТЫ.И ЕСЛИ В ИСХОДНОМ РЕЗЮМЕ ЕСТЬ КАКОЙ-ТО ДОПОЛНИТЕЛЬНЫЙ ТИП КОНТАКТА, ТО ПО ОБРАЗЦУ НИЖЕ ТАКЖЕ ДОБАВЬ ЕГО. \begin{center} \begin{tabular}{c} \href{mailto:artyom.korobov@list.ru}{artyom.korobov@list.ru} \\ +7 (920) 531-10-85 \\ Москва \\ \end{tabular} \end{center} % ---------- ОБРАЗОВАНИЕ ---------- %% ПРОВЕРЬ ПОЛНОТУ ДАННЫХ ОБ ОБРАЗОВАНИИ, ЯЗЫКАХ И УНИКАЛЬНЫХ ДЕТАЛЯХ ПО CHECKLIST ЦЕЛОСТНОСТИ \sectionheader{ОБРАЗОВАНИЕ} \textbf{Государственный университет управления, Москва} \hfill \textit{2026} \\ ИИС, Бизнес-информатика \\ % ---------- ТЕХНИЧЕСКИЕ НАВЫКИ ---------- %% ЗАДАЧА: СГРУППИРОВАТЬ И ОБОГАТИТЬ НАВЫКИ \sectionheader{НАВЫКИ} \begin{tabular}{@{}p{0.2\textwidth} p{0.75\textwidth}@{}} Языки: & Python, Go, Shell, SQL \\ Фреймворки: & FastAPI, Django, DRF, Flask, aiohttp, aiogram \\ Базы данных: & PostgreSQL, OracleDB, Clickhouse, Redis, MySQL \\ Брокеры сообщений: & Kafka, RabbitMQ, Celery \\ Тестирование: & Pytest, Unittest, Siege \\ DevOps: & Docker, Kubernetes, Airflow, Nginx, Linux \\ ML/LLM/BigData: & Whisper, LLM, PyTorch, pandas \\ Другое: & Git, REST API, SFTP, Cryptography, ORM, Agile, Selenium, BS4, Асинхронное программирование \\ \end{tabular} % ---------- ОПЫТ РАБОТЫ ---------- %% ЗАДАЧА: ПРЕОБРАЗОВАТЬ ОБЯЗАННОСТИ В ДОСТИЖЕНИЯ \sectionheader{ОПЫТ РАБОТЫ} \textbf{Банк ВТБ (ПАО), Python-разработчик} \hfill \textit{Июнь 2024 — Настоящее время} \\ \textit{Проект: Распределённая система агентов передачи данных} \begin{itemize} \vspace{-6pt}\item Разработал микросервисы на Python с использованием asyncio, криптографии (SHA256, ключи подписи), Kafka, Redis для надёжной доставки и обработки файлов. \item Реализовал передачу файлов через SFTP/API, построение маршрутов агентов и обработку логики через брокеры сообщений, обеспечив защищенные каналы и мониторинг потока. \item Перевел обработку Shell-скриптов в асинхронные Python-сценарии, повысив эффективность. \item Интегрировал тестирование (Pytest, Unittest) и обеспечил покрытие ключевых точек системы. \item Разработал вспомогательные библиотеки для работы с Cryptography, API, SFTP, Clickhouse и Kafka. \item Участвовал в проекте на Go (задачи на ранней стадии), расширяя свой технологический кругозор. \item \textbf{Результат:} Повышена скорость обработки потоков файлов, внедрена гибкая архитектура агентов, расширена поддержка протоколов и форматов. \end{itemize} \vspace{8pt} \textbf{IBS, Python-разработчик} \hfill \textit{Июнь 2021 — Апрель 2024} \\ \textit{Проект: Высоконагруженные микросервисы обработки и анализа данных} \begin{itemize} \vspace{-6pt}\item Создал высоконагруженные микросервисы на FastAPI/Django (DRF) с использованием асинхронных агентов на aiohttp, Celery, Redis и Kafka для обработки и анализа данных с ML/LLM. \item Интегрировал Whisper для обработки аудио и подключил модели LLM для анализа, развив функциональность системы. \item Разработал парсер на BS4/Selenium с автоматической валидацией подключения, улучшив качество входящих данных. \item Обеспечил обработку потоковых данных через Kafka и RabbitMQ. \item Провел комплексное тестирование (unit, интеграционные, нагрузочные — Pytest, Siege), обеспечив стабильность и надежность. \item Внедрил Airflow и Docker для оркестрации и планирования задач, оптимизировав процессы развертывания. \item \textbf{Результат:} Повышена стабильность парсинга и анализа, существенно ускорена обработка входящих запросов, улучшена масштабируемость и гибкость архитектуры. \end{itemize} % ---------- ПРОЕКТЫ ---------- %% ЗАДАЧА: ВЫНЕСТИ ПРОЕКТЫ В ОТДЕЛЬНУЮ СЕКЦИЮ. ЕСЛИ ИХ НЕТ - ПРОПУСТИТЬ. % В данном резюме нет явно выделенных отдельных проектов, не связанных с опытом работы. \end{document}
+\documentclass[11pt]{article}
+%%%%% START: REQUIRED PACKAGES %%%%% 
+% ==== ОБЯЗАТЕЛЬНЫЕ ПАКЕТЫ ДЛЯ РУССКОГО ЯЗЫКА ====
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+%%%%% END: REQUIRED PACKAGES %%%%% 
+% ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Дополнительные шрифты
+\usepackage{cm-super}
+% ОБЯЗАТЕЛЬНЫЙ ПАКЕТ - Пакет для гиперссылок (исправляет ошибки с \href)
+\usepackage{hyperref}
+% ОБЯЗАТЕЛЬНО - Настройки страницы
+\usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry}
+% ОБЯЗАТЕЛЬНО - Настройка шрифтов без засечек
+\renewcommand{\familydefault}{\sfdefault}
+% ОБЯЗАТЕЛЬНО - Убираем лишнее
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{empty}
+% ОБЯЗАТЕЛЬНО - Простое оформление разделов
+%%%%% START: SECTION MACRO %%%%%
+\newcommand{\sectionheader}[1]{%
+    \vspace{8pt}%
+    \noindent\textbf{\large #1} \\
+    \vspace{-8pt}%
+    \rule{\textwidth}{0.5pt}%
+    \vspace{6pt}%
+}
+%%%%% END: SECTION MACRO %%%%%
+\begin{document}
+% ---------- ЗАГОЛОВОК ----------
+\begin{center}
+    \LARGE \textbf{Артем Коробов} \\
+    \large Python-разработчик \\[5pt]
+\end{center}
+% Контактная информация
+%% ПРОВЕРЬ ПОЛНОТУ КОНТАКТОВ ПО CHECKLIST ЦЕЛОСТНОСТИ. НЕ ДОБАВЛЯЙ В LATEX КОД ОТСУТСТВУЮЩИЕ В ИСХОДНОМ РЕЗЮМЕ КОНТАКТЫ.И ЕСЛИ В ИСХОДНОМ РЕЗЮМЕ ЕСТЬ КАКОЙ-ТО ДОПОЛНИТЕЛЬНЫЙ ТИП КОНТАКТА, ТО ПО ОБРАЗЦУ НИЖЕ ТАКЖЕ ДОБАВЬ ЕГО.
+\begin{center}
+    \begin{tabular}{c}
+        \href{mailto:artyom.korobov@list.ru}{artyom.korobov@list.ru} \\
+        +7 (920) 531-10-85 \\
+        Москва \\
+    \end{tabular}
+\end{center}
+% ---------- ОБРАЗОВАНИЕ ----------
+%% ПРОВЕРЬ ПОЛНОТУ ДАННЫХ ОБ ОБРАЗОВАНИИ, ЯЗЫКАХ И УНИКАЛЬНЫХ ДЕТАЛЯХ ПО CHECKLIST ЦЕЛОСТНОСТИ
+\sectionheader{ОБРАЗОВАНИЕ}
+\textbf{Государственный университет управления, Москва} \hfill \textit{2026} \\
+ИИС, Бизнес-информатика \\
+% ---------- ТЕХНИЧЕСКИЕ НАВЫКИ ----------
+%% ЗАДАЧА: СГРУППИРОВАТЬ И ОБОГАТИТЬ НАВЫКИ
+\sectionheader{НАВЫКИ}
+\begin{tabular}{@{}p{0.2\textwidth} p{0.75\textwidth}@{}}
+    Языки: & Python, Go, Shell, SQL \\
+    Фреймворки: & FastAPI, Django, DRF, Flask, aiohttp, aiogram \\
+    Базы данных: & PostgreSQL, OracleDB, Clickhouse, Redis, MySQL \\
+    Брокеры сообщений: & Kafka, RabbitMQ, Celery \\
+    Тестирование: & Pytest, Unittest, Siege \\
+    DevOps: & Docker, Kubernetes, Airflow, Nginx, Linux \\
+    ML/LLM/BigData: & Whisper, LLM, PyTorch, pandas \\
+    Другое: & Git, REST API, SFTP, Cryptography, ORM, Agile, Selenium, BS4, Асинхронное программирование \\
+\end{tabular}
+% ---------- ОПЫТ РАБОТЫ ----------
+%% ЗАДАЧА: ПРЕОБРАЗОВАТЬ ОБЯЗАННОСТИ В ДОСТИЖЕНИЯ
+\sectionheader{ОПЫТ РАБОТЫ}
+\textbf{Банк ВТБ (ПАО), Python-разработчик} \hfill \textit{Июнь 2024 — Настоящее время} \\
+\textit{Проект: Распределённая система агентов передачи данных}
+\begin{itemize}
+    \vspace{-6pt}\item Разработал микросервисы на Python с использованием asyncio, криптографии (SHA256, ключи подписи), Kafka, Redis для надёжной доставки и обработки файлов.
+    \item Реализовал передачу файлов через SFTP/API, построение маршрутов агентов и обработку логики через брокеры сообщений, обеспечив защищенные каналы и мониторинг потока.
+    \item Перевел обработку Shell-скриптов в асинхронные Python-сценарии, повысив эффективность.
+    \item Интегрировал тестирование (Pytest, Unittest) и обеспечил покрытие ключевых точек системы.
+    \item Разработал вспомогательные библиотеки для работы с Cryptography, API, SFTP, Clickhouse и Kafka.
+    \item Участвовал в проекте на Go (задачи на ранней стадии), расширяя свой технологический кругозор.
+    \item \textbf{Результат:} Повышена скорость обработки потоков файлов, внедрена гибкая архитектура агентов, расширена поддержка протоколов и форматов.
+\end{itemize}
+\vspace{8pt}
+\textbf{IBS, Python-разработчик} \hfill \textit{Июнь 2021 — Апрель 2024} \\
+\textit{Проект: Высоконагруженные микросервисы обработки и анализа данных}
+\begin{itemize}
+    \vspace{-6pt}\item Создал высоконагруженные микросервисы на FastAPI/Django (DRF) с использованием асинхронных агентов на aiohttp, Celery, Redis и Kafka для обработки и анализа данных с ML/LLM.
+    \item Интегрировал Whisper для обработки аудио и подключил модели LLM для анализа, развив функциональность системы.
+    \item Разработал парсер на BS4/Selenium с автоматической валидацией подключения, улучшив качество входящих данных.
+     \item Обеспечил обработку потоковых данных через Kafka и RabbitMQ.
+    \item Провел комплексное тестирование (unit, интеграционные, нагрузочные — Pytest, Siege), обеспечив стабильность и надежность.
+    \item Внедрил Airflow и Docker для оркестрации и планирования задач, оптимизировав процессы развертывания.
+    \item \textbf{Результат:} Повышена стабильность парсинга и анализа, существенно ускорена обработка входящих запросов, улучшена масштабируемость и гибкость архитектуры.
+\end{itemize}
+% ---------- ПРОЕКТЫ ----------
+%% ЗАДАЧА: ВЫНЕСТИ ПРОЕКТЫ В ОТДЕЛЬНУЮ СЕКЦИЮ. ЕСЛИ ИХ НЕТ - ПРОПУСТИТЬ.
+% В данном резюме нет явно выделенных отдельных проектов, не связанных с опытом работы.
+\end{document}
